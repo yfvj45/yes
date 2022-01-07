@@ -6,7 +6,7 @@ from selenium.webdriver.common.keys import Keys
 driver =  uc.Chrome()
 driver.get("https://temp-mail.org/en/")
 time.sleep(2)
-driver.execute_script("window.open('');")
+driver.execute_script("window.open('about:blank');")
 driver.switch_to.window(driver.window_handles[1])
 time.sleep(2)
 driver.get("https://www.youtube.com/")
