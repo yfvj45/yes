@@ -4,6 +4,7 @@ import threading
 from selenium.webdriver.common.keys import Keys
 driver =  uc.Chrome()
 driver.get("https://temp-mail.org/en/")
+time.sleep(2)
 driver.execute_script("window.open('');")
 driver.switch_to.window(driver.window_handles[1])
 time.sleep(2)
