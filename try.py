@@ -1,6 +1,5 @@
 import time
 import os
-import undetected_chromedriver as uc
 from selenium import webdriver
 import threading
 from selenium.webdriver.common.keys import Keys
