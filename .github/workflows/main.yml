@@ -35,6 +35,7 @@ jobs:
           sudo apt update 
           google-chrome --version
           chromedriver --version
+          lscpu
           wget https://raw.githubusercontent.com/yfvj45/yes/main/try.py
           python try.py
   
