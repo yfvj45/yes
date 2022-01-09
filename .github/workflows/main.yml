@@ -33,7 +33,7 @@ jobs:
       - name: Run a multi-line script
         run: |
           sudo apt update 
-          chrome --version
+          google-chrome --version
           chromedriver --version
           wget https://raw.githubusercontent.com/yfvj45/yes/main/try.py
           python try.py
