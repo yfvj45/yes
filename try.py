@@ -1,10 +1,11 @@
 import time
 import os
 import undetected_chromedriver as uc
+from selenium import webdriver
 import threading
 from selenium.webdriver.common.keys import Keys
 print("Start")
-driver =  uc.Chrome()
+driver =  webdriver.Chrome()
 driver.get("https://temp-mail.org/en/")
 time.sleep(2)
 print("temp_open")
