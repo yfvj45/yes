@@ -7,7 +7,7 @@ from selenium import webdriver
 
 options = webdriver.ChromeOptions()
 options.add_experimental_option("detach", True)
-options.add_argument('--headless')
+#options.add_argument('--headless')
 options.add_argument("--no-sandbox"); # Bypass OS security model
 
 driver = webdriver.Chrome(options=options)
@@ -51,8 +51,8 @@ driver.get("https://youtu.be/-kSxVQghbY0")
 time.sleep(2)
 driver.execute_script("window.open('');")
 driver.switch_to.window(driver.window_handles[7])
-driver.get("https://youtu.be/h2889QVThX4")
-time.sleep(2)
+driver.get("https://www.youtube.com/watch?v=4xS-eMXg15E")
+time.sleep(21600)
 print("End")
     
     
