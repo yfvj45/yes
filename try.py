@@ -5,7 +5,7 @@ from selenium import webdriver
 import threading
 from selenium.webdriver.common.keys import Keys
 print("Start")
-driver =  webdriver.Chrome('chromedriver')
+driver =  webdriver.Chrome()
 driver.get("https://temp-mail.org/en/")
 time.sleep(2)
 print("temp_open")
