@@ -34,6 +34,7 @@ driver.execute_script("window.open('');")
 driver.switch_to.window(driver.window_handles[2])
 driver.get("https://www.youtube.com/watch?v=KhgjRa0wli4&list=UUOsxh5uNZFWSC7aYR-vvm-A")
 time.sleep(2)
+print("playlist")
 driver.execute_script("window.open('');")
 driver.switch_to.window(driver.window_handles[3])
 driver.get("https://youtu.be/6G-pTxdjao4")
@@ -52,6 +53,7 @@ driver.execute_script("window.open('');")
 driver.switch_to.window(driver.window_handles[7])
 driver.get("https://youtu.be/h2889QVThX4")
 time.sleep(2)
+print("End")
     
     
     
