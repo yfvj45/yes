@@ -7,7 +7,7 @@ from selenium import webdriver
 
 options = webdriver.ChromeOptions()
 options.add_experimental_option("detach", True)
-#options.add_argument('--headless')
+options.add_argument('--headless')
 options.add_argument("--no-sandbox"); # Bypass OS security model
 
 driver = webdriver.Chrome(options=options)
