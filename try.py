@@ -4,7 +4,13 @@ import undetected_chromedriver as uc
 from selenium import webdriver
 import threading
 from selenium.webdriver.common.keys import Keys
-driver =  uc.Chrome()
+from selenium import webdriver
+
+options = webdriver.ChromeOptions()
+options.add_argument('--headless')
+options.add_argument("--no-sandbox"); # Bypass OS security model
+
+driver = webdriver.Chrome(options=options)
 print("Start")
 driver.get("https://temp-mail.org/en/")
 time.sleep(2)
