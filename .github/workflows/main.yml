@@ -44,6 +44,7 @@ jobs:
           sudo chown root:root /usr/bin/chromedriver 
           sudo chmod +x /usr/bin/chromedriver 
           pip install undetected-chromedriver
+          ls
           wget https://raw.githubusercontent.com/yfvj45/yes/main/try.py
           python try.py
   
