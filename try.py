@@ -3,13 +3,16 @@ import os
 import undetected_chromedriver as uc
 import threading
 from selenium.webdriver.common.keys import Keys
+print("Start")
 driver =  uc.Chrome()
 driver.get("https://temp-mail.org/en/")
 time.sleep(2)
+print("temp_open")
 driver.execute_script("window.open('');")
 driver.switch_to.window(driver.window_handles[1])
 time.sleep(2)
 driver.get("https://www.youtube.com/")
+print("Youtube_Open")
 driver.maximize_window()
 time.sleep(20)
 driver.find_element_by_xpath('/html/body/ytd-app/div/div/ytd-masthead/div[3]/div[2]/ytd-searchbox/form/div[1]/div[1]/input').click()
