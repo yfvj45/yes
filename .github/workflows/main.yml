@@ -37,6 +37,6 @@ jobs:
           chromedriver --version
           ls
           pip install selenium
-          wget https://raw.githubusercontent.com/yfvj45/yes/main/try.py
+          wget  https://raw.githubusercontent.com/yfvj45/yes/main/try.py
           python try.py
   
