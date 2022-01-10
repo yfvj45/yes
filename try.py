@@ -17,7 +17,7 @@ vdisplay.start()
 #options.add_argument('--headless')
 #options.add_argument("--no-sandbox"); # Bypass OS security model
 #driver = uc.Chrome(options=options,version_main=96)
-driver = uc.Chrome()
+driver = uc.Chrome(version_main=96)
 print("Start")
 driver.get("https://temp-mail.org/en/")
 driver.execute_script("window.open('');")
