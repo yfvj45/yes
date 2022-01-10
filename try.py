@@ -19,10 +19,7 @@ options.add_argument("--no-sandbox"); # Bypass OS security model
 driver = uc.Chrome(options=options,version_main=96)
 
 print("Start")
-driver.get("https://temp-mail.org/en/")
-driver.execute_script("window.open('');")
-driver.switch_to.window(driver.window_handles[1])
-time.sleep(2)
+
 driver.get("https://www.youtube.com/")
 driver.maximize_window()    
 time.sleep(20)
