@@ -20,10 +20,9 @@ driver = uc.Chrome(options=options,version_main=96)
 
 driver.get("https://temp-mail.org/en/")
 print("Start")
-driver.execute_script("window.open('about:blank','secondtab');")
-
-# It is switching to second tab now
-driver.switch_to.window("secondtab")
+driver.execute_script("window.open('');")
+time.sleep(2)
+driver.switch_to.window(driver.window_handles[1])
 driver.get("https://www.youtube.com/")
 driver.maximize_window()    
 time.sleep(20)
