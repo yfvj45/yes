@@ -1,24 +1,23 @@
 import time
 import os
-from selenium import webdriver
 import undetected_chromedriver.v2 as uc
 import threading
-
+from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver import ActionChains
-from selenium import webdriver
+
 from xvfbwrapper import Xvfb
 
 vdisplay = Xvfb()
 vdisplay.start()
-options = uc.ChromeOptions()
+#options = uc.ChromeOptions()
 #USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36'
 #options.add_argument('--user-agent=%s' % USER_AGENT)
 #options.headless=True
 #options.add_argument('--headless')
-options.add_argument("--no-sandbox"); # Bypass OS security model
-
-driver = uc.Chrome(options=options,version_main=96)
+#options.add_argument("--no-sandbox"); # Bypass OS security model
+#driver = uc.Chrome(options=options,version_main=96)
+driver = uc.Chrome()
 print("Start")
 driver.get("https://temp-mail.org/en/")
 driver.execute_script("window.open('');")
