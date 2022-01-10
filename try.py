@@ -34,7 +34,7 @@ time.sleep(5)
 
 driver.find_element_by_xpath('/html/body/ytd-app/div/ytd-page-manager/ytd-search/div[1]/ytd-two-column-search-results-renderer/div/ytd-section-list-renderer/div[2]/ytd-item-section-renderer/div[3]/ytd-video-renderer[1]/div[1]').click()
 print("Started")
-time.sleep(300)
+time.sleep(3)
 driver.execute_script("window.open('');")
 driver.switch_to.window(driver.window_handles[2])
 driver.get("https://www.youtube.com/watch?v=KhgjRa0wli4&list=UUOsxh5uNZFWSC7aYR-vvm-A")
