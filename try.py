@@ -7,9 +7,9 @@ from selenium.webdriver.common.keys import Keys
 from selenium import webdriver
 
 options = uc.ChromeOptions()
-#USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36'
-#options.add_argument('--user-agent=%s' % USER_AGENT)
-#options.add_argument('--headless')
+USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36'
+options.add_argument('--user-agent=%s' % USER_AGENT)
+options.add_argument('--headless')
 options.add_argument("--no-sandbox"); # Bypass OS security model
 
 driver = uc.Chrome(options=options,version_main=96)
@@ -60,7 +60,7 @@ time.sleep(3)
 driver.execute_script("window.open('');")
 driver.switch_to.window(driver.window_handles[7])
 driver.get("https://www.youtube.com/watch?v=4xS-eMXg15E")
-time.sleep(21600)
+time.sleep(9000)
 print("End")
     
     
