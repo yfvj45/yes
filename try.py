@@ -18,8 +18,12 @@ options = uc.ChromeOptions()
 options.add_argument("--no-sandbox"); # Bypass OS security model
 driver = uc.Chrome(options=options,version_main=96)
 
+driver.get("https://temp-mail.org/en/")
 print("Start")
+driver.execute_script("window.open('about:blank','secondtab');")
 
+# It is switching to second tab now
+driver.switch_to.window("secondtab")
 driver.get("https://www.youtube.com/")
 driver.maximize_window()    
 time.sleep(20)
@@ -29,6 +33,7 @@ driver.find_element_by_xpath('/html/body/ytd-app/div/div/ytd-masthead/div[3]/div
 time.sleep(5)
 
 driver.find_element_by_xpath('/html/body/ytd-app/div/ytd-page-manager/ytd-search/div[1]/ytd-two-column-search-results-renderer/div/ytd-section-list-renderer/div[2]/ytd-item-section-renderer/div[3]/ytd-video-renderer[1]/div[1]').click()
+print("Started")
 time.sleep(300)
 driver.execute_script("window.open('');")
 driver.switch_to.window(driver.window_handles[2])
