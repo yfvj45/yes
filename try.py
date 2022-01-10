@@ -5,6 +5,7 @@ import undetected_chromedriver.v2 as uc
 import threading
 
 from selenium.webdriver.common.keys import Keys
+from selenium.webdriver import ActionChains
 from selenium import webdriver
 from xvfbwrapper import Xvfb
 
