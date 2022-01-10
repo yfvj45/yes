@@ -7,16 +7,12 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver import ActionChains
 from selenium.webdriver.common.by import By
 
-from xvfbwrapper import Xvfb
-
-vdisplay = Xvfb()
-vdisplay.start()
 options = uc.ChromeOptions()
 #USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36'
 #options.add_argument('--user-agent=%s' % USER_AGENT)
-#options.headless=True
-#options.add_argument('--headless')
-options.add_argument("--no-sandbox"); # Bypass OS security model
+options.headless=True
+options.add_argument('--headless')
+
 driver = uc.Chrome(options=options,version_main=96)
 
 driver.get("https://temp-mail.org/en/")
@@ -60,7 +56,7 @@ driver.get("https://youtu.be/h2889QVThX4")
 time.sleep(2)
 time.sleep(600)
 print("End")
-vdisplay.stop()
+
     
     
     
