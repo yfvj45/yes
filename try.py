@@ -12,7 +12,7 @@ options = uc.ChromeOptions()
 options.add_argument('--headless')
 options.add_argument("--no-sandbox"); # Bypass OS security model
 
-driver = uc.Chrome(options=options,version_main=96.0.4664.110)
+driver = uc.Chrome(options=options,version_main=96)
 print("Start")
 driver.get("https://temp-mail.org/en/")
 time.sleep(2)
