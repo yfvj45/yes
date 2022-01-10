@@ -33,12 +33,6 @@ time.sleep(5)
 
 driver.find_element_by_xpath('/html/body/ytd-app/div/ytd-page-manager/ytd-search/div[1]/ytd-two-column-search-results-renderer/div/ytd-section-list-renderer/div[2]/ytd-item-section-renderer/div[3]/ytd-video-renderer[1]/div[1]').click()
 time.sleep(4)
-driver.find_element_by_css_selector('button.ytp-button.ytp-settings-button').click()
-driver.find_element_by_xpath("//div[contains(text(),'Quality')]").click()
-time.sleep(2)   # you can adjust this time
-quality = driver.find_element_by_xpath("//span[contains(string(),'144p')]")
-print("Element is visible? " + str(quality.is_displayed()))
-quality.click()
 driver.execute_script("window.open('');")
 driver.switch_to.window(driver.window_handles[2])
 driver.get("https://www.youtube.com/watch?v=KhgjRa0wli4&list=UUOsxh5uNZFWSC7aYR-vvm-A")
