@@ -44,6 +44,7 @@ driver.get("https://www.youtube.com/watch?v=KhgjRa0wli4&list=UUOsxh5uNZFWSC7aYR-
 time.sleep(3)
 print("playlist")
 driver.execute_script("window.open('');")
+
 driver.switch_to.window(driver.window_handles[3])
 driver.get("https://youtu.be/6G-pTxdjao4")
 print('Link_Play')
