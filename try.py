@@ -6,6 +6,7 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver import ActionChains
 from selenium.webdriver.common.by import By
+import random
 
 def create_chromedriver(title,t):
     options = uc.ChromeOptions()
@@ -18,12 +19,14 @@ def create_chromedriver(title,t):
     driver.execute_script("window.open('');")
     driver.switch_to.window(driver.window_handles[1])
     driver.get("https://www.youtube.com/")
-    driver.maximize_window()    
-    time.sleep(20)
+    driver.maximize_window()
+    k=random.randint(15,25)
+    time.sleep(k)
     driver.find_element_by_xpath('/html/body/ytd-app/div/div/ytd-masthead/div[3]/div[2]/ytd-searchbox/form/div[1]/div[1]/input').click()
     driver.find_element_by_xpath('/html/body/ytd-app/div/div/ytd-masthead/div[3]/div[2]/ytd-searchbox/form/div[1]/div[1]/input').send_keys(title)
     driver.find_element_by_xpath('/html/body/ytd-app/div/div/ytd-masthead/div[3]/div[2]/ytd-searchbox/form/div[1]/div[1]/input').send_keys(Keys.ENTER)
-    time.sleep(5)
+    f=random.randint(0,5)
+    time.sleep(f)
     driver.find_element_by_xpath('/html/body/ytd-app/div/ytd-page-manager/ytd-search/div[1]/ytd-two-column-search-results-renderer/div/ytd-section-list-renderer/div[2]/ytd-item-section-renderer/div[3]/ytd-video-renderer[1]/div[1]').click()
     time.sleep(3)
     driver.save_screenshot('Video.png')
