@@ -31,8 +31,7 @@ def create_chromedriver(title,t):
     time.sleep(3)
     driver.save_screenshot('Video.png')
     print("Video_found")
-    if t==300:
-      time.sleep(600)
+    time.sleep(t)
     
 
      
